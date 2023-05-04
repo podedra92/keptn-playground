@@ -5,4 +5,4 @@ indicators:
   failing_request: promhttp_metric_handler_requests_total{code!="200",namespace="test-hardening"}
   http_requests_total_sucess: http_requests_total{status="success",namespace="test-hardening"}
   go_routines: go_goroutines{namespace="test-hardening"}
-  request_throughput: sum(rate(http_requests_total{status="success",namespace="test-hardening"}[$DURATION_SECONDS]))
+  request_throughput: sum(rate(http_requests_total{status="success",namespace="test-hardening"}[330s]))
