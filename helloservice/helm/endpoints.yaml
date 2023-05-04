@@ -1,2 +1,2 @@
 deploymentURIsLocal:
-  - "http://helloservice.podtatohead-production:80" 
+  - "http://helloservice.test-production:80" 
