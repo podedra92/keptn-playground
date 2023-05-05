@@ -13,7 +13,7 @@ actions:
         cmd:
           - bash
           - '-c'
-          - kubectl config get-contexts
+          - echo "This is fake news - prakash isn't smart enough to figure out how to get me to authenticate to the cluster in order to restart the pod!"
         env:
           - name: PROJECT
             value: "$.data.project"
