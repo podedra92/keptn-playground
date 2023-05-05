@@ -1,8 +1,8 @@
 ---
 spec_version: '1.0'
 indicators:
-  http_response_time_seconds_main_page_sum: sum(rate(http_server_request_duration_seconds_sum{method="GET", namespace="test-hardening", route="/", service="helloservice", status_code="200"}[10m])/rate(http_server_request_duration_seconds_count{method="GET", namespace="test-hardening", route="/", service="helloservice", status_code="200"}[10m]))
-  failing_request: promhttp_metric_handler_requests_total{code!="200",namespace="test-hardening"}
-  http_requests_total_sucess: http_requests_total{status="success",namespace="test-hardening"}
-  go_routines: go_goroutines{namespace="test-hardening"}
-  request_throughput: sum(rate(http_requests_total{status="success",namespace="test-hardening"}[10m]))
+  http_response_time_seconds_main_page_sum: sum(rate(http_server_request_duration_seconds_sum{method="GET", namespace="test-production", route="/", service="helloservice", status_code="200"}[300s])/rate(http_server_request_duration_seconds_count{method="GET", namespace="test-production", route="/", service="helloservice", status_code="200"}[300s]))
+  failing_request: promhttp_metric_handler_requests_total{code!="200",namespace="test-production"}
+  http_requests_total_sucess: http_requests_total{status="success",namespace="test-production"}
+  go_routines: go_goroutines{namespace="test-production"}
+  request_throughput: sum(rate(http_requests_total{status="success",namespace="test-production"}[330s]))
