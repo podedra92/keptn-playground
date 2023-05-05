@@ -13,7 +13,7 @@ actions:
         cmd:
           - bash
           - '-c'
-          - kubectl delete pods -l app=$(SERVICE) -n $(PROJECT)-$(STAGE)
+          - kubectl config get-contexts
         env:
           - name: PROJECT
             value: "$.data.project"
